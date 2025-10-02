@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+    <title>مدیریت زمان</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="form" id="formSection">
+        <div class="inputTextarea">
+          <input type="text" id="input" placeholder="عنوان" />
+          <textarea
+            placeholder="توضیحات"
+            rows="14"
+            cols="41"
+            name=""
+            id="textarea"
+            class="textarea"
+          ></textarea>
+        </div>
+        <h2>تاریخ</h2>
+        <div class="date">
+          <div class="date_time">
+            <input type="date" id="date_start" />
+            <input type="time" id="time_start" value="08:00" />
+            <div class="show_time"></div>
+          </div>
+          <div class="date_time">
+            <input type="date" id="date_end" />
+            <input type="time" id="time_end" value="08:00" />
+            <div></div>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="btn" type="button" id="saveBtn">ذخیره اطلاعات</button>
+          <button class="btn" type="button" id="listTask">لیست ها</button>
+        </div>
+      </form>
+      <div id="listSection" class="listSection">
+        <button type="button" id="addTask" class="addTask">+</button>
+        <h2>لیست تسک ها</h2>
+        <div>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="جستجو براساس عنوان"
+          />
+
+          <select id="filterSelect" class="filterSelect">
+            <option value="all">همه تسک ها</option>
+            <option value="today">امروز</option>
+            <option value="tomorrow">فردا</option>
+          </select>
+        </div>
+        <ul id="taskList" class="taskList"></ul>
+      </div>
+    </div>
+  </body>
+</html>
